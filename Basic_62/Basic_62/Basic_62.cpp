@@ -7,44 +7,52 @@ using namespace std;
 
 unordered_map<string, float> cooldowns;
 
-bool UseSkill
-(const string& skillName, float cooldownTime)
+const float FIREBALL_COOLTIME = 5.0f;
+const string FIRE_BALL = "FireBall";
+const string DASH = "DASH";
+
+bool UseSkill(const string& skillName,
+	float cooldownTime)
 {
-    if (cooldowns[skillName] <= 0.0f)
-    {
-        cooldowns[skillName] = cooldownTime;
-        cout << "Used " << skillName << endl;
-        return true;
-    }
-    else
-    {
-        cout << skillName << " is cooling down: "
-            << cooldowns[skillName] << "s left\n";
-        return false;
-    }
+	if (cooldowns[skillName] <= 0.0f)
+	{
+		cooldowns[skillName] = cooldownTime;
+		cout << "Used " << skillName << endl;
+		return true;
+	}
+	else
+	{
+		cout << skillName << " is cooling down: "
+			<< cooldowns[skillName] << "s left"
+			<< endl;
+		return false;
+	}
 }
 
 void Update(float deltaTime)
 {
-    for (auto& [skill, time] : cooldowns)
-    {
-        time = max(0.0f, time - deltaTime);
-    }
+	for (auto& [skill, time] : cooldowns)
+	{
+		time = max(0.0f, time - deltaTime);
+	}
 }
-
 int main() 
 {
-    cooldowns["Fireball"] = 0.0f;
-    cooldowns["Dash"] = 0.0f;
+	cooldowns[FIRE_BALL] = 0.0f;
+	cooldowns[DASH] = 0.0f;
 
-    UseSkill("Fireball", 5.0f);
-    UseSkill("Dash", 3.0f);
+	UseSkill(FIRE_BALL, FIREBALL_COOLTIME);
+	UseSkill(DASH, 3.0f);
 
-    Update(2.0f); // 2초 흐름
-    UseSkill("Fireball", 5.0f); // 아직 사용 불가
+	// 2초 흐름
+	Update(2.0f);
 
-    Update(3.0f); // 추가 3초 흐름
-    UseSkill("Fireball", 5.0f); // 이제 사용 가능
+	// 아직 사용 불가
+	UseSkill(FIRE_BALL, FIREBALL_COOLTIME);
 
-    return 0;
+	// 추가로 3초 흐름
+	Update(3.0f);
+
+	// 이제 사용 가능
+	UseSkill(FIRE_BALL, FIREBALL_COOLTIME);
 }
