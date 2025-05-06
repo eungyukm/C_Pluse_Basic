@@ -1,0 +1,4 @@
+﻿  Basic_72.cpp
+C:\Users\obliy\OneDrive\문서\GitHub\C_Pluse_Basic\Basic_72\Basic_72\Basic_72.cpp(8,11): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\obliy\OneDrive\문서\GitHub\C_Pluse_Basic\Basic_72\Basic_72\Basic_72.cpp(41,28): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Basic_72.vcxproj -> C:\Users\obliy\OneDrive\문서\GitHub\C_Pluse_Basic\Basic_72\x64\Debug\Basic_72.exe
