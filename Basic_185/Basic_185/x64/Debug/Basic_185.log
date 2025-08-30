@@ -1,0 +1,3 @@
+﻿  Basic_185.cpp
+C:\Users\obliy\OneDrive\문서\GitHub\C_Pluse_Basic\Basic_185\Basic_185\Basic_185.cpp(32): warning C4715: 'GetDrop': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  Basic_185.vcxproj -> C:\Users\obliy\OneDrive\문서\GitHub\C_Pluse_Basic\Basic_185\x64\Debug\Basic_185.exe

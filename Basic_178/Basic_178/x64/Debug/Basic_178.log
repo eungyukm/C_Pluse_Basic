@@ -1,0 +1,4 @@
+﻿  Basic_178.cpp
+C:\Users\obliy\OneDrive\문서\GitHub\C_Pluse_Basic\Basic_178\Basic_178\Basic_178.cpp(72,40): warning C4390: ';': 제어된 빈 문이 있습니다. 이 문이 필요합니까?
+C:\Users\obliy\OneDrive\문서\GitHub\C_Pluse_Basic\Basic_178\Basic_178\Basic_178.cpp(73,38): warning C4390: ';': 제어된 빈 문이 있습니다. 이 문이 필요합니까?
+  Basic_178.vcxproj -> C:\Users\obliy\OneDrive\문서\GitHub\C_Pluse_Basic\Basic_178\x64\Debug\Basic_178.exe
